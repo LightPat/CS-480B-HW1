@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+body {
+  background-color: #ffffff;
 }
 
 .Nav-bar {
@@ -11,6 +11,6 @@
 }
 
 .Nav-element {
-  padding: 0px 25px;
+  padding: 3px 20px 7px 20px;
   color: #61dafb;
 }
