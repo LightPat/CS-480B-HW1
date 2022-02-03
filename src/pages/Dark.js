@@ -13,12 +13,21 @@ function readPrivacyPolicyFile() {
 
 function Dark() {
   return (
-    <div class>
-      <h1>Dark page</h1>
-      <input type="checkbox" id="pp-check" class="pp" checked></input>
-      <label for="pp-check" class="pp">Do you agree to all terms and conditions (below)?</label>
-      <div id="privacy-policy">{readPrivacyPolicyFile()}</div>
+    <div class="row">
+      <div class="left-column">
+        <h1>Left</h1>
+      </div>
+      <div class="center-column">
+        <h1>Welcome to Cob's</h1>
+        <input type="checkbox" id="pp-checkbox" class="small-input" checked></input>
+        <label for="pp-checkbox" class="small-input">Do you agree to all terms and conditions (below)?</label>
+        <p id="privacy-policy">{readPrivacyPolicyFile()}</p>
+      </div>
+      <div class="right-column">
+        <h1>Right</h1>
+      </div>
     </div>
+    
   );
 }
 
