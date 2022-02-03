@@ -7,11 +7,11 @@ import ErrorPage from './pages/ErrorPage.js';
 
 function App() {
   return (
-    <Router>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/dark">Dark Version</Link>
-        <Link to="/light">Light Version</Link>
+    <Router className='App'>
+      <nav className='Nav-bar'>
+        <Link to="/" className='Nav-element'>Home</Link>
+        <Link to="/dark" className='Nav-element'>Dark Version</Link>
+        <Link to="/light" className='Nav-element'>Light Version</Link>
       </nav>
 
       <Routes>
