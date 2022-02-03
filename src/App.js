@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Dark from './pages/Dark.js';
 import Light from './pages/Light.js';
 import ErrorPage from './pages/ErrorPage.js';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -16,11 +17,11 @@ function App() {
         <Route path="/" />
         <Route path="/light" element={<Light />} />
         <Route path="/dark" element={<Dark />} />
-        {/* <Route path="/privacypolicy" element={<PrivacyPolicy />} /> */}
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
