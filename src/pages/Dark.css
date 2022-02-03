@@ -22,6 +22,10 @@ body {
     width: 30%;
 }
 
+.shoe-image {
+    width: 260px;
+}
+
 #privacy-policy {
     /* color: rgb(179, 255, 0); */
     text-align: left;
