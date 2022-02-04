@@ -37,7 +37,6 @@ h2 {
 
 .soul-button {
     background-color: #4CAF50;
-    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -46,7 +45,6 @@ h2 {
 }
 
 #privacy-policy {
-    /* color: rgb(179, 255, 0); */
     text-align: left;
     font-size: 9px;
     height: 50px;

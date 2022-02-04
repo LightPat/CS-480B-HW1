@@ -1,6 +1,5 @@
 import './Light.css';
 import React from "react"
-import privacypolicy from './Privacy Policy.txt'
 import { Link } from "react-router-dom"
 // import ImageGallery from 'react-image-gallery';
 
@@ -13,14 +12,13 @@ import heels2 from "../images/Heels 2.jpg"
 import heels3 from "../images/Heels 3.jpg"
 import heels4 from "../images/Heels 4.jpg"
 
-
-function readPrivacyPolicyFile() {
-  fetch(privacypolicy)
-    .then(response => response.text())
-    .then(data => {
-      const element = document.getElementById("privacy-policy")
-      element.innerHTML = data
-    })
+function check() {
+  if (document.getElementById("pp-checkbox").checked) {
+    window.location.href = "/end"
+  }
+  else {
+    alert("Check the box to agree to the terms of service first")
+  }
 }
 
 function Light() {
@@ -36,15 +34,19 @@ function Light() {
       <div class="center-column">
         <h1>Welcome to Cob's Cobbler!</h1>
 
-        <h2>Get NEW FREE Shoes Every Week for $2 a Week!</h2>
+        <h2>Get NEW Shoes Every Week for $2.22 + tax a Week!</h2>
 
-        <input type="checkbox" id="pp-checkbox" class="small-input" checked></input>
-        <label for="pp-checkbox" class="small-input">Do you agree to all terms and conditions (below)?</label>
-        <p id="privacy-policy">{readPrivacyPolicyFile()}</p>
-        
-        <Link to="/end" className='Nav-element'>
-        <button class="soul-button">Give me free shoes!</button>
-        </Link>
+        <input type="checkbox" id="pp-checkbox" class="large-input"></input>
+        <label for="pp-checkbox" class="large-input">Do you agree to all terms and conditions?</label>
+
+        <Link to="/privacypolicy" className="terms-link">Click to see terms</Link>
+
+        <br></br>
+        <br></br>
+
+        {/* <Link to="/end" className='Nav-element'> */}
+        <button class="soul-button" onClick={check}>Give me free shoes!</button>
+        {/* </Link> */}
       </div>
       <div class="right-column">
         <div class="top-div"></div>

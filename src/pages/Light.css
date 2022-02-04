@@ -54,9 +54,14 @@ h2 {
     overflow-y: auto;
 }
 
-.small-input {
-    height: 7px;
-    font-size: 9px;
+.terms-link {
+    font-size: 25px;
+    padding: 0px 0px 0px 20px;
+}
+
+.large-input {
+    height: 20px;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 1100px) {

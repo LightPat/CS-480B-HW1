@@ -1,19 +1,21 @@
+import './PrivacyPolicy.css'
+import { Link } from "react-router-dom"
 import privacypolicy from './Privacy Policy.txt'
 
 function readPrivacyPolicyFile() {
     fetch(privacypolicy)
     .then(response => response.text())
     .then(data => {
-        const element = document.getElementById("privacy-policy")
+        const element = document.getElementById("policy")
         element.innerHTML = data
-        return data
     })
 }
 
 function PrivacyPolicy() {
     return (
-        <div>
-            <p id="privacy-policy">{readPrivacyPolicyFile()}</p>
+        <div class="pp">
+            <Link to="/light"><h1>Go Back</h1></Link>
+            <p id="policy">{readPrivacyPolicyFile()}</p>
         </div>
     )
 }
