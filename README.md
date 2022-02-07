@@ -1,2 +1,2 @@
 # Website Hosted at
-[](pseeman.strangled.net).
+[Link](pseeman.strangled.net).
