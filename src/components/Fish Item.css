@@ -1,0 +1,29 @@
+#item-div {
+    display: inline-block;
+    outline: 3px solid black;
+    text-align: center;
+    width: 250px;
+    margin: 0px 20px;
+}
+
+#price {
+    font-weight: bold;
+    margin-top: 0px;
+    font-size: 16px;
+}
+
+#add-button {
+    background-color: green;
+    margin-bottom: 3px;
+}
+
+#title {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#description {
+    font-weight: 500;
+    font-size: 20px;
+    margin: -25px 0px 0px;
+}
