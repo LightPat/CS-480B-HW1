@@ -1,7 +1,7 @@
 import './Light.css';
 import React from "react"
 import { Link } from "react-router-dom"
-// import ImageGallery from 'react-image-gallery';
+import CartButton from "../components/Cart Button.js"
 
 import boots1 from "../images/Boots 1.jpg"
 import boots2 from "../images/Boots 2.jpg"
@@ -32,7 +32,8 @@ function Light() {
         <img src={boots4} alt="Boots" class="shoe-image"></img>
       </div>
       <div class="center-column">
-        <h1>Welcome to Cob's Cobbler!</h1>
+        <h1>Cob's Seafood Emporium</h1>
+        <CartButton />
 
         <h2>Get NEW Shoes Every Week for $2.22 + tax a Week!</h2>
 
