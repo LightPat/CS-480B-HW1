@@ -1,0 +1,10 @@
+h1 {
+    display: inline-block;
+}
+
+body {
+    background-image: url("../../images/background-ocean.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}

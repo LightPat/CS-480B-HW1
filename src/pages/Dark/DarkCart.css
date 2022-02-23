@@ -1,0 +1,45 @@
+#checkout {
+    float: none;
+}
+
+#checkout-button {
+    font-size: 40px;
+    background-color: green;
+    transition: all 0.15s;
+}
+
+#checkout-button:hover {
+    font-size: 60px;
+    color: white;
+}
+
+#left-column {
+    float: none;
+    margin-left: -20px;
+}
+
+#right-column {
+    float: none;
+    margin-right: -50px;
+}
+
+#checkout label {
+    font-size: 15px;
+    text-shadow: none;
+}
+
+.terms-link {
+    font-size: 15px;
+}
+
+#icon {
+    display: inline-block;
+    height: 50px;
+    position: absolute;
+}
+
+#right-column h1 {
+    font-size: 15px;
+    text-shadow: none;
+    color: black;
+}
