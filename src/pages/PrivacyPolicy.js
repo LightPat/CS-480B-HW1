@@ -14,7 +14,6 @@ function readPrivacyPolicyFile() {
 function PrivacyPolicy() {
     return (
         <div class="pp">
-            <Link to="/light"><h1>Go Back</h1></Link>
             <p id="policy">{readPrivacyPolicyFile()}</p>
         </div>
     )

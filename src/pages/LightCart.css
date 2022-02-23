@@ -1,0 +1,65 @@
+#cart-list {
+    list-style-position: inside;
+}
+
+#icon {
+    display: inline-block;
+    height: 50px;
+    position: absolute;
+}
+
+ol {
+    padding-left: 100px;
+    display: inline-block;
+    text-align: left;
+    font-weight: bold;
+}
+
+#left-column {
+    float: left;
+    margin: 0px 0px 0px 350px;
+}
+
+#right-column {
+    float: right;
+    margin: 25px 200px 0px 0px;
+}
+
+#right-column h1 {
+    color: red;
+    text-shadow: 3px 3px 0 black, 0.5px 3px 0 black, 3px 3px 0 black, 3px 3px 0 black;
+}
+
+#right-column h2 {
+    color: yellow;
+    text-shadow: 3px 3px 0 black, 0.5px 3px 0 black, 3px 3px 0 black, 3px 3px 0 black;
+}
+
+#right-column label {
+    font-size: 25px;
+    text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black;
+}
+
+#checkout {
+    float: right;
+}
+
+#checkout label {
+    font-size: 25px;
+    text-shadow: -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 0.5px 0 black, 0.5px 0.5px 0 black;
+}
+
+.terms-link {
+    font-size: 25px;
+}
+
+#checkout-button {
+    font-size: 20px;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}

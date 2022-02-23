@@ -11,13 +11,17 @@ import SalmonFillet from "../images/SalmonFillet.jpg"
 let items = []
 
 function Light() {
+  // if (items != []) {
+  //   items.length = 0
+  // }
+
   return (
     <div className="row">
       <h1>Cob's Seafood Emporium</h1>
       <CartButton items={ items } />
       <br></br>
-      <FishItem title="Sole" image={Sole} description="Fresh, never frozen" price="25.65" items={ items }/>
-      <FishItem title="Sole" image={Sole} description="Frozen" price="15.52" items={ items }/>
+      <FishItem title="Sole Fish" image={Sole} description="Fresh, never frozen" price="25.65" items={ items }/>
+      <FishItem title="Sole Fish" image={Sole} description="Frozen" price="15.52" items={ items }/>
       <FishItem title="Sole Fillet" image={SoleFillet} description="Never Frozen" price="20.02" items={ items }/>
       <br></br>
       <FishItem title="Sole Fillet" image={SoleFillet} description="Never Frozen" price="15.20" items={ items }/>

@@ -4,10 +4,6 @@ body {
     background-size: cover;
 }
 
-h2 {
-    background-color: #4CAF50;
-}
-
 .center-column {
     text-align: center;
     float: left;
