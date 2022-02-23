@@ -5,7 +5,7 @@ export default function CartButton(props) {
     const cartItems = props.items
 
     return (
-        <Link to="/lightcart" state={cartItems}>
+        <Link to={props.link} state={cartItems}>
             <button className='cart-button'>Cart</button>
         </Link>
     )

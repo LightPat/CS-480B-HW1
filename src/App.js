@@ -1,13 +1,13 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Dark from './pages/Dark.js';
-import Light from './pages/Light.js';
+import Dark from './pages/Dark/Dark.js';
+import Light from './pages/Light/Light.js';
 import Soul from './pages/Soul.js';
 import ErrorPage from './pages/ErrorPage.js';
 import PrivacyPolicy from './pages/PrivacyPolicy.js';
 
-import LightCart from './pages/LightCart.js';
-// import DarkCart from './pages/DarkCart.js';
+import LightCart from './pages/Light/LightCart.js';
+import DarkCart from './pages/Dark/DarkCart.js';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="/light" element={<Light />} />
         <Route path="/dark" element={<Dark />} />
         <Route path="/lightcart" element={<LightCart />} />
-        {/* <Route path="/darkcart" element={<DarkCart />} /> */}
+        <Route path="/darkcart" element={<DarkCart />} />
         <Route path="/end" element={<Soul />}/>
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="*" element={<ErrorPage />} />

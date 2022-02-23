@@ -1,24 +1,18 @@
 import './Light.css';
-import { Link } from "react-router-dom"
-import CartButton from "../components/Cart Button.js"
-import FishItem from "../components/Fish Item.js"
-
-import Sole from "../images/Sole.jpg"
-import SoleFillet from "../images/Sole Fillet.webp"
-import SalmonHeadOff from "../images/SalmonHeadOff.jpg"
-import SalmonFillet from "../images/SalmonFillet.jpg"
+import CartButton from "../../components/Cart Button.js"
+import FishItem from "../../components/Fish Item.js"
+import Sole from "../../images/Sole.jpg"
+import SoleFillet from "../../images/Sole Fillet.webp"
+import SalmonHeadOff from "../../images/SalmonHeadOff.jpg"
+import SalmonFillet from "../../images/SalmonFillet.jpg"
 
 let items = []
 
 function Light() {
-  // if (items != []) {
-  //   items.length = 0
-  // }
-
   return (
     <div className="row">
       <h1>Cob's Seafood Emporium</h1>
-      <CartButton items={ items } />
+      <CartButton items={ items } link="/lightcart"/>
       <br></br>
       <FishItem title="Sole Fish" image={Sole} description="Fresh, never frozen" price="25.65" items={ items }/>
       <FishItem title="Sole Fish" image={Sole} description="Frozen" price="15.52" items={ items }/>
