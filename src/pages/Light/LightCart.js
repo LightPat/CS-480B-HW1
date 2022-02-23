@@ -9,10 +9,10 @@ function Cart(props) {
     let cartItems = data.state
 
     function check() {
-        if (document.getElementById("pp-checkbox").checked
-            && document.getElementById("soul-checkbox").checked
-            && document.getElementById("price-checkbox").checked
-            && document.getElementById("cancel-checkbox").checked) {
+        if (document.getElementById("light-pp-checkbox").checked
+            && document.getElementById("light-soul-checkbox").checked
+            && document.getElementById("light-price-checkbox").checked
+            && document.getElementById("light-cancel-checkbox").checked) {
           window.location.href = "/end"
         }
         else {
