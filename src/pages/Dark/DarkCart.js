@@ -27,10 +27,19 @@ function Cart(props) {
         return total * 2
     }
 
+    function check() {
+        if (document.getElementById("pp-checkbox").checked) {
+          window.location.href = "/end"
+        }
+        else {
+          alert("Check all 4 boxes to agree to your purchase")
+        }
+    }
+
     return (
         <div>
             <div id='checkout'>
-                <button id='checkout-button'>Submit Order</button>
+                <button id='checkout-button' onClick={check}>Submit Order</button>
                 <br />
                 <input type="checkbox" id="pp-checkbox" checked></input>
                 <label for="pp-checkbox">Do you agree to all terms and conditions? </label>
