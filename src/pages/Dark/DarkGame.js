@@ -28,6 +28,11 @@ function DarkGame() {
                 <p id="silver">{silverBucks}</p>
                 <p id="bronze">{bronzeBucks}</p>
             </div>
+
+            <div className="dark-login-bonus">
+                <h2>Login Bonus</h2>
+                <p>Claim your login bonus 1 more day to unlock dark mode!</p>
+            </div>
         </div>
     )
 }
