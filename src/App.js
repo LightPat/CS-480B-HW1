@@ -1,6 +1,7 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import ErrorPage from './pages/ErrorPage'
+import EndPage from './pages/Soul'
 
 // Dark imports
 import DarkLogin from './pages/Dark/DarkLogin'
@@ -21,6 +22,7 @@ function App() {
           <Route path="/darklogin" element={<DarkLogin />} />
           <Route path="/darkgame" element={<DarkGame />} />
           <Route path="/darkloginbonus" element={<DarkLoginBonus />} />
+          <Route path="/end" element={<EndPage />}></Route>
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
