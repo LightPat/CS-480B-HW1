@@ -15,11 +15,71 @@
   background-image: url("./images/Super-Star.png");
   width: 880px;
   height: 880px;
-  border: 3px solid green;
   margin: auto;
   text-align: center;
 }
 
-.dark-game {
+.dark-game-header {
+  text-align: center;
+}
 
+.dark-game-header button {
+  margin: 0px 20px;
+}
+
+.dark-game {
+  border: 3px solid black;
+  text-align: center;
+  margin: auto;
+  width: 25%;
+  height: 25%;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dark-game button {
+  padding: 15px;
+  background-color: green;
+  font-size: 28px;
+  margin: 50px 0px;
+}
+
+.dark-cob-bucks {
+  display: inline-block;
+}
+
+#gold {
+  font-size: 18px;
+  background-color: gold;
+  text-align: center;
+  width: 12px;
+  height: 25px;
+  margin: auto;
+}
+
+#silver {
+  font-size: 18px;
+  background-color: silver;
+  text-align: center;
+  width: 12px;
+  height: 25px;
+  margin: auto;
+}
+
+#bronze {
+  font-size: 18px;
+  background-color: #cd7f32;
+  text-align: center;
+  width: 12px;
+  height: 25px;
+  margin: auto;
+}
+
+.dark-login-bonus {
+
+  border: 3px solid black;
 }
