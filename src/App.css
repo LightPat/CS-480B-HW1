@@ -37,6 +37,12 @@
   display: inline-block;
 }
 
+.dark-footer {
+  font-size: 8px;
+  position: absolute;
+  bottom: 5px;
+}
+
 .centered {
   text-align: center;
 }
@@ -90,7 +96,7 @@
 }
 
 .dark-checkbox {
-  
+
 }
 
 .submit-button {
