@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom"
 
-function DarkLoginBonus() {
+function LightLoginBonus() {
     let data = useLocation()
     let prevState = data.state
 
@@ -47,4 +47,4 @@ function DarkLoginBonus() {
     )
 }
 
-export default DarkLoginBonus
+export default LightLoginBonus

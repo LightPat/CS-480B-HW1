@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useLocation } from "react-router";
 
-function DarkStore() {
+function LightStore() {
     let data = useLocation()
     let prevState = data.state
 
@@ -86,4 +86,4 @@ function DarkStore() {
 
 
 
-export default DarkStore
+export default LightStore
