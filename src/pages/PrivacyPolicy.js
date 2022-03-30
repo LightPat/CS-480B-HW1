@@ -1,5 +1,3 @@
-import './PrivacyPolicy.css'
-import { Link } from "react-router-dom"
 import privacypolicy from './Privacy Policy.txt'
 
 function readPrivacyPolicyFile() {

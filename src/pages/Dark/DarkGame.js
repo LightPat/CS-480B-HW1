@@ -20,6 +20,8 @@ function DarkGame() {
         // If the random number is greater than 5 the user wins
         // The random number is between 0 and 10
         let roll = Math.random() * 10;
+
+        alert("Spent $1 to play the game")
     
         if (roll > luck[2]) {
             goldBucks++;
@@ -142,8 +144,8 @@ function DarkGame() {
                     <li>$2 = 1 Bronze CobBuck</li>
                     <li>5 Bronze = 1 Silver</li>
                     <li>5 Silver = 1 Gold</li>
-                    <li>We can infer: 1 Silver = $10</li>
-                    <li>We can infer: 1 Gold = $50</li>
+                    <li>However: 1 Silver = $5</li>
+                    <li>However 1 Gold = $10</li>
                     <li>Tokens are less valuable than the money you put in, thus making you lose money everytime you buy them by hitting the recharge button</li>
                 </ol>
             </div>

@@ -19,7 +19,7 @@ function Dark() {
                 </label>
                 <br></br><br></br>
                 <Link to="/darkgame">
-                    <button className="submit-button">Submit</button>
+                    <button className="submit-button">Log in</button>
                 </Link>
 
                 <footer className="dark-footer">By signing into my account, I agree to all terms and conditions</footer>

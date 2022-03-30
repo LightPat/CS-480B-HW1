@@ -43,6 +43,11 @@
   bottom: 5px;
 }
 
+.light-footer {
+  font-size: 16px;
+  position: relative;
+}
+
 .centered {
   text-align: center;
 }
@@ -85,10 +90,6 @@
   margin: auto;
 }
 
-.dark-login-bonus {
-  
-}
-
 .dark-item {
   outline: 3px solid black;
   margin: auto;
@@ -109,10 +110,6 @@
   font-style: italic;
   border: 3px solid black;
   background-color: red;
-}
-
-.dark-checkbox {
-
 }
 
 .submit-button {

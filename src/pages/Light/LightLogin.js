@@ -1,6 +1,16 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
-function Dark() {
+function Light() {
+    const navigate = useNavigate()
+    function checkForSubmit() {
+        if (document.getElementById("check1").checked) {
+                navigate("/lightgame")
+        }
+        else {
+          alert("Agree to the terms and conditions before continuing")
+        }
+    }
+
     return (
         <div>
             <div className="dark-login">
@@ -18,14 +28,17 @@ function Dark() {
                     <input type="text" name="username"></input>
                 </label>
                 <br></br><br></br>
-                <Link to="/darkgame">
-                    <button className="submit-button">Submit</button>
-                </Link>
-
-                <footer className="dark-footer">By signing into my account, I agree to all terms and conditions</footer>
+                <label>
+                    <input type="checkbox" id="check1"></input>
+                    I agree to all terms and conditions
+                </label>
+                <br></br><br></br>
+                <button className="submit-button" onClick={checkForSubmit}>Log in</button>
+                <br></br><br></br>
+                <Link to="/privacypolicy" className="Nav-element" target='_blank'>Click to see terms in separate tab</Link>
             </div>
         </div>
     )
 }
 
-export default Dark
+export default Light

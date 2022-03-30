@@ -9,7 +9,7 @@ function DarkLoginBonus() {
     function checkForSubmit() {
         if (document.getElementById("check1").checked
             && document.getElementById("check2").checked) {
-                navigate("/darkstore", {
+                navigate("/lightstore", {
                     state: {
                         gold: prevState['gold'],
                         silver: prevState['silver'],
@@ -29,7 +29,7 @@ function DarkLoginBonus() {
             <h1>Daily Login Bonus</h1>
 
             <div className="dark-login-incantation">
-                Volo videre tenebras aeternas
+                Hoc vere sit multum
             </div>
             <br></br>
             <label>

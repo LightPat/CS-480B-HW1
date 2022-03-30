@@ -11,7 +11,7 @@ function DarkStore() {
             prevState['gold']-=5
             alert("Thank you for your purchase")
 
-            navigate("/darkgame", {
+            navigate("/lightgame", {
                 state: {
                     gold: prevState['gold'],
                     silver: prevState['silver'],
@@ -23,7 +23,7 @@ function DarkStore() {
         else {
             alert("You don't have enough money for that!")
 
-            navigate("/darkgame", {
+            navigate("/lightgame", {
                 state: {
                     gold: prevState['gold'],
                     silver: prevState['silver'],
@@ -74,8 +74,8 @@ function DarkStore() {
             </div>
 
             <div className="dark-item">
-                <h2>Better Luck</h2>
-                <p>5 Gold prevState</p>
+                <h2>Better Odds in the Game</h2>
+                <p>5 Gold CobBucks ($125)</p>
                 <button onClick={buy}>Buy</button>
             </div>
             <br></br>

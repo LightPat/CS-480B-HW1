@@ -75,7 +75,7 @@ function DarkStore() {
 
             <div className="dark-item">
                 <h2>Better Luck</h2>
-                <p>5 Gold prevState</p>
+                <p>5 Gold CobBucks</p>
                 <button onClick={buy}>Buy</button>
             </div>
             <br></br>
