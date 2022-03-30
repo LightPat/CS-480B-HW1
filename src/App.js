@@ -7,6 +7,7 @@ import EndPage from './pages/Soul'
 import DarkLogin from './pages/Dark/DarkLogin'
 import DarkGame from './pages/Dark/DarkGame'
 import DarkLoginBonus from './pages/Dark/DarkLoginBonus'
+import DarkStore from './pages/Dark/DarkStore'
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <Route path="/darklogin" element={<DarkLogin />} />
           <Route path="/darkgame" element={<DarkGame />} />
           <Route path="/darkloginbonus" element={<DarkLoginBonus />} />
-          <Route path="/end" element={<EndPage />}></Route>
+          <Route path="/darkstore" element={<DarkStore />} />
+          <Route path="/end" element={<EndPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>

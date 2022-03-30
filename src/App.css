@@ -89,6 +89,18 @@
   
 }
 
+.dark-item {
+  outline: 3px solid black;
+  margin: auto;
+  width: 100px;
+  padding-bottom: 5px;
+}
+
+.dark-item button {
+  background-color: green;
+  font-size: 16px;
+}
+
 .dark-login-incantation {
   width: 25%;
   margin: auto;
