@@ -21,7 +21,7 @@ function LightGame() {
         // The random number is between 0 and 10
         let roll = Math.random() * 10;
 
-        alert("You spent $1 to play the game")
+        alert("You spent $0.50 to play the game")
     
         if (roll > luck[2]) {
             goldBucks++;
