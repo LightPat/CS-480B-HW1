@@ -1,33 +1,48 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Dark from './pages/Dark/Dark.js';
-import Light from './pages/Light/Light.js';
-import Soul from './pages/Soul.js';
-import ErrorPage from './pages/ErrorPage.js';
-import PrivacyPolicy from './pages/PrivacyPolicy.js';
+import './App.css'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import ErrorPage from './pages/ErrorPage'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
-import LightCart from './pages/Light/LightCart.js';
-import DarkCart from './pages/Dark/DarkCart.js';
+// Dark imports
+import DarkLogin from './pages/Dark/DarkLogin'
+import DarkGame from './pages/Dark/DarkGame'
+import DarkLoginBonus from './pages/Dark/DarkLoginBonus'
+import DarkStore from './pages/Dark/DarkStore'
+
+// Light imports
+import LightLogin from './pages/Light/LightLogin'
+import LightGame from './pages/Light/LightGame'
+import LightLoginBonus from './pages/Light/LightLoginBonus'
+import LightStore from './pages/Light/LightStore'
 
 function App() {
   return (
-    <Router>
-      <nav className='Nav-bar'>
-        <Link to="/light" className='Nav-element'>Light Version</Link>
-        <Link to="/dark" className='Nav-element'>Dark Version</Link>
-      </nav>
+    <div>
+      <Router>
+        <nav className='Nav-bar'>
+          <Link to="/lightlogin" className='Nav-element'>Light Version</Link>
+          <Link to="/darklogin" className='Nav-element'>Dark Version</Link>
+        </nav>
 
-      <Routes>
-        <Route path="/" />
-        <Route path="/light" element={<Light />} />
-        <Route path="/dark" element={<Dark />} />
-        <Route path="/lightcart" element={<LightCart />} />
-        <Route path="/darkcart" element={<DarkCart />} />
-        <Route path="/end" element={<Soul />}/>
-        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </Router>
+        <Routes>
+          <Route path="/" />
+          <Route path="*" element={<ErrorPage />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+
+          <Route path="/lightlogin" element={<LightLogin />} />
+          <Route path="/lightgame" element={<LightGame />} />
+          <Route path="/lightloginbonus" element={<LightLoginBonus />} />
+          <Route path="/lightstore" element={<LightStore />} />
+
+          <Route path="/darklogin" element={<DarkLogin />} />
+          <Route path="/darkgame" element={<DarkGame />} />
+          <Route path="/darkloginbonus" element={<DarkLoginBonus />} />
+          <Route path="/darkstore" element={<DarkStore />} />
+        </Routes>
+      </Router>
+      <div className='app'>
+      </div>
+    </div>
   )
 }
 
