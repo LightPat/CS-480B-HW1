@@ -13,7 +13,7 @@ function DarkGame() {
                     <button>Login Bonus</button>
                 </Link>
                 <button>Store</button>
-                <button>Recharge</button>
+                <button onClick={recharge}>Recharge</button>
             </div>
 
             <div className="dark-game" id="game">
@@ -67,6 +67,15 @@ function game() {
 
     document.getElementById('game').style.backgroundColor = "white";
     alert("You lost! :(");
+}
+
+function recharge() {
+    goldBucks++;
+    silverBucks++;
+    bronzeBucks++;
+    document.getElementById('bronze').innerHTML = bronzeBucks;
+    document.getElementById('silver').innerHTML = silverBucks;
+    document.getElementById('gold').innerHTML = goldBucks;
 }
 
 export default DarkGame
