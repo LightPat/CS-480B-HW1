@@ -1,0 +1,30 @@
+#outline {
+    outline: 3px black solid;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    padding-bottom: 3px;
+}
+
+#artist-image {
+    max-width: 100%;
+    height: auto;
+}
+
+#title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#artist {
+    font-size: 20px;
+}
+
+#play-button {
+    font-size: 24px;
+}
+
+#download-button {
+    font-size: 24px;
+    margin-left: 2px;
+}
