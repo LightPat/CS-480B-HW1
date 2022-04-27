@@ -1,4 +1,5 @@
-#outline {
+#song-parent {
+    display: inline-block;
     outline: 3px black solid;
     width: 500px;
     height: auto;

@@ -1,3 +1,7 @@
-#outline {
-    outline: 3px black solid;
+#favorites-parent {
+    display: inline;
+}
+
+#favorites-button {
+    font-size: 20px;
 }
