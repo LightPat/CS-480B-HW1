@@ -1,13 +1,14 @@
-import { Link, useLocation, useNavigate } from "react-router-dom"
 import FavoritesModal from "../../components/FavoritesModal"
 import Song from "../../components/Song"
 import dfLogo from '../../images/Dragonforce Logo.webp'
 import minami from '../../images/Minami.png'
 import sevenSpiresLogo from '../../images/Seven-Spires-Logo.jpg'
 import { useState } from 'react';
+import Footer from "../../components/Footer"
 
 function Light() {
     const [favorites, setFavorites] = useState([]);
+    const [nowPlayingSong, setNowPlayingSong] = useState("No Song Playing");
 
     const s = () => {
         console.log(favorites)
@@ -34,7 +35,8 @@ function Light() {
                 <Song title="Lightbringer" artist="Seven Spires" image={sevenSpiresLogo}/>
             </div>
 
-            <div>Now Playing</div>
+            <div id='placeholder'></div>
+            <footer id="now-playing-bar">{nowPlayingSong}</footer>
         </div>
     )
 }

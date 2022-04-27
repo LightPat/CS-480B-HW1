@@ -4,7 +4,7 @@
     width: 500px;
     height: auto;
     margin: auto;
-    padding-bottom: 3px;
+    padding-bottom: 7px;
 }
 
 #artist-image {
@@ -26,6 +26,11 @@
 }
 
 #download-button {
+    font-size: 24px;
+    margin-left: 2px;
+}
+
+#add-to-favorites-button {
     font-size: 24px;
     margin-left: 2px;
 }

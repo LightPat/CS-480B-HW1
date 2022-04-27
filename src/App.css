@@ -18,3 +18,17 @@
 #songs-listing {
   padding-top: 20px;
 }
+
+#now-playing-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  font-size: 40px;
+  background-color: black;
+  padding: 10px 0px;
+}
+
+#placeholder {
+  height: 150px;
+  width: auto;
+}
