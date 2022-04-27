@@ -2,8 +2,7 @@ import './FavoritesModal.css'
 
 export default function FavoritesModal(props) {
     function showFavorites() {
-        console.log(props.favorites)
-        alert('Favorites')
+        alert(props.favorites)
     }
 
     return (

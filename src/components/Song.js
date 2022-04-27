@@ -17,7 +17,7 @@ export default function Song(props) {
         <div id='song-parent'>
             <p id='title'>{props.title}</p>
             <p id='artist'>{props.artist}, {props.year}</p>
-            <img id='artist-image' src={props.image}></img>
+            <img id='artist-image' src={props.image} alt=""></img>
             <button id='play-button' onClick={playOnClick}>Play</button>
             <button id='download-button' onClick={downloadButtonClick}>Download</button>
             <button id='add-to-favorites-button' onClick={addToFavorites}>Add To Favorites</button>
