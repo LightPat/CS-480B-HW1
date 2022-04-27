@@ -5,14 +5,26 @@ import minami from '../../images/Minami.png'
 import sevenSpiresLogo from '../../images/Seven-Spires-Logo.jpg'
 import { useState } from 'react';
 
+let dateFilter = ""
+let titleFilter = ""
+let artistFilter = ""
+
 function Light() {
     const [favorites, setFavorites] = useState([]);
     const [nowPlayingSong, setNowPlayingSong] = useState("No Song Playing");
 
-    let dateFilter = ""
     function filterDate(e) {
         dateFilter = e.target.value
-        console.log(dateFilter)
+        setFilteredSongs(displaySongs())
+    }
+
+    function filterTitle(e) {
+        titleFilter = e.target.value
+        setFilteredSongs(displaySongs())
+    }
+
+    function filterArtist(e) {
+        artistFilter = e.target.value
         setFilteredSongs(displaySongs())
     }
 
@@ -30,21 +42,21 @@ function Light() {
 
     function displaySongs() {
         let componentList = []
+        console.log([dateFilter, titleFilter, artistFilter])
 
         for (let i = 0; i < songOptions.length; i++) {
-            if (dateFilter == "") {
-                componentList.push(<Song title={songOptions[i]["title"]} artist={songOptions[i]["artist"]} image={songOptions[i]["image"]} year={songOptions[i]["year"]} />)
-            }
-            else if (songOptions[i]["year"] == dateFilter) {
+            if (
+                (dateFilter === "" || songOptions[i]["year"] === parseInt(dateFilter))
+                && songOptions[i]["title"].toLowerCase().includes(titleFilter.toLowerCase())
+                && songOptions[i]["artist"].toLowerCase().includes(artistFilter.toLowerCase())) {
                 componentList.push(<Song title={songOptions[i]["title"]} artist={songOptions[i]["artist"]} image={songOptions[i]["image"]} year={songOptions[i]["year"]} />)
             }
         }
-        console.log(componentList)
+
         return componentList
     }
 
     const s = () => {
-        console.log(favorites)
         setFavorites(favorites + 1)
     }
 
@@ -64,12 +76,12 @@ function Light() {
 
                 <label>
                     Title:
-                    <input></input>
+                    <input onChange={filterTitle}></input>
                 </label>
 
                 <label>
                     Artist:
-                    <input></input>
+                    <input onChange={filterArtist}></input>
                 </label>
             </div>
 
