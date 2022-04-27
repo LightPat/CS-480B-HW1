@@ -14,3 +14,7 @@
 .centered {
   text-align: center;
 }
+
+#songs-listing {
+  padding-top: 20px;
+}

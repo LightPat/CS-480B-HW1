@@ -22,17 +22,17 @@ function Light() {
 
             <div>Filters</div>
 
-            <div>Songs</div>
-
-            <Song title="Through the Fire and Flames" artist="Dragonforce" image={dfLogo}/>
-            <Song title="Heroes of Our Time" artist="Dragonforce" image={dfLogo}/>
-            <Song title="Cry Thunder" artist="Dragonforce" image={dfLogo}/>
-            <Song title="Freheit" artist="Minami" image={minami}/>
-            <Song title="Waiting for Rain" artist="Minami" image={minami}/>
-            <Song title="Hollowness" artist="Minami" image={minami}/>
-            <Song title="Ghost of Yesterday" artist="Seven Spires" image={sevenSpiresLogo}/>
-            <Song title="Gods of Debauchery" artist="Seven Spires" image={sevenSpiresLogo}/>
-            <Song title="Lightbringer" artist="Seven Spires" image={sevenSpiresLogo}/>
+            <div id="songs-listing">
+                <Song title="Through the Fire and Flames" artist="Dragonforce" image={dfLogo}/>
+                <Song title="Heroes of Our Time" artist="Dragonforce" image={dfLogo}/>
+                <Song title="Cry Thunder" artist="Dragonforce" image={dfLogo}/>
+                <Song title="Freheit" artist="Minami" image={minami}/>
+                <Song title="Crying for Rain" artist="Minami" image={minami}/>
+                <Song title="Hollowness" artist="Minami" image={minami}/>
+                <Song title="Ghost of Yesterday" artist="Seven Spires" image={sevenSpiresLogo}/>
+                <Song title="Gods of Debauchery" artist="Seven Spires" image={sevenSpiresLogo}/>
+                <Song title="Lightbringer" artist="Seven Spires" image={sevenSpiresLogo}/>
+            </div>
 
             <div>Now Playing</div>
         </div>
