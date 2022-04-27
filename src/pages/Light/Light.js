@@ -4,7 +4,6 @@ import dfLogo from '../../images/Dragonforce Logo.webp'
 import minami from '../../images/Minami.png'
 import sevenSpiresLogo from '../../images/Seven-Spires-Logo.jpg'
 import { useState } from 'react';
-import Footer from "../../components/Footer"
 
 function Light() {
     const [favorites, setFavorites] = useState([]);
@@ -21,18 +20,33 @@ function Light() {
             <FavoritesModal favorites={favorites}/>
             <button onClick={s}>Test Button</button>
 
-            <div>Filters</div>
+            <div id="filters-div">
+                <label>
+                    Release Year:
+                    <input type="text"></input>
+                </label>
+
+                <label>
+                    Title:
+                    <input type="text"></input>
+                </label>
+
+                <label>
+                    Artist:
+                    <input type="text"></input>
+                </label>
+            </div>
 
             <div id="songs-listing">
-                <Song title="Through the Fire and Flames" artist="Dragonforce" image={dfLogo}/>
-                <Song title="Heroes of Our Time" artist="Dragonforce" image={dfLogo}/>
-                <Song title="Cry Thunder" artist="Dragonforce" image={dfLogo}/>
-                <Song title="Freheit" artist="Minami" image={minami}/>
-                <Song title="Crying for Rain" artist="Minami" image={minami}/>
-                <Song title="Hollowness" artist="Minami" image={minami}/>
-                <Song title="Ghost of Yesterday" artist="Seven Spires" image={sevenSpiresLogo}/>
-                <Song title="Gods of Debauchery" artist="Seven Spires" image={sevenSpiresLogo}/>
-                <Song title="Lightbringer" artist="Seven Spires" image={sevenSpiresLogo}/>
+                <Song title="Through the Fire and Flames" artist="Dragonforce" image={dfLogo} year={2005}/>
+                <Song title="Heroes of Our Time" artist="Dragonforce" image={dfLogo} year={2008}/>
+                <Song title="Cry Thunder" artist="Dragonforce" image={dfLogo} year={2012}/>
+                <Song title="Freheit" artist="Minami" image={minami} year={2021}/>
+                <Song title="Crying for Rain" artist="Minami" image={minami} year={2019}/>
+                <Song title="Hollowness" artist="Minami" image={minami} year={2019}/>
+                <Song title="Ghost of Yesterday" artist="Seven Spires" image={sevenSpiresLogo} year={2021}/>
+                <Song title="Gods of Debauchery" artist="Seven Spires" image={sevenSpiresLogo} year={2021}/>
+                <Song title="Lightbringer" artist="Seven Spires" image={sevenSpiresLogo} year={2021}/>
             </div>
 
             <div id='placeholder'></div>

@@ -32,3 +32,12 @@
   height: 150px;
   width: auto;
 }
+
+#filters-div {
+  padding-top: 20px;
+}
+
+#filters-div label {
+  font-weight: bold;
+  padding-right: 1%;
+}
