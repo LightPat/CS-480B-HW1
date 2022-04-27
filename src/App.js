@@ -31,16 +31,7 @@ function App() {
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
 
           <Route path="/light" element={<Light />} />
-
-          {/* <Route path="/lightlogin" element={<LightLogin />} />
-          <Route path="/lightgame" element={<LightGame />} />
-          <Route path="/lightloginbonus" element={<LightLoginBonus />} />
-          <Route path="/lightstore" element={<LightStore />} />
-
-          <Route path="/darklogin" element={<DarkLogin />} />
-          <Route path="/darkgame" element={<DarkGame />} />
-          <Route path="/darkloginbonus" element={<DarkLoginBonus />} />
-          <Route path="/darkstore" element={<DarkStore />} /> */}
+          {/* <Route path="/dark" element={<Dark />} /> */}
         </Routes>
       </Router>
       <div className='app'>

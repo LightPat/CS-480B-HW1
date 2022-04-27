@@ -16,7 +16,7 @@ function Light() {
 
     return (
         <div className="centered">
-            <h1>Cob's Soul Music</h1>
+            <h1 style={{display: "inline", paddingRight: "10px"}}>Cob's Soul Music</h1>
             <FavoritesModal favorites={favorites}/>
             <button onClick={s}>Test Button</button>
 
