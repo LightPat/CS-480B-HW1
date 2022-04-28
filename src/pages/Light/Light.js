@@ -55,7 +55,11 @@ function Light() {
     function addToFavorites(newValue) {
         if (!favorites.includes(newValue)) {
             favorites.push(newValue)
-            document.getElementById('test').innerHTML = favorites
+
+            let ul = document.getElementById('favorites-display')
+            let li = document.createElement('li')
+            li.appendChild(document.createTextNode(favorites[favorites.length-1]))
+            ul.appendChild(li)
         }
     }
     
@@ -70,7 +74,7 @@ function Light() {
         <div className="centered">
             <h1 style={{display: "inline", paddingRight: "10px"}}>Cob's Soul Music</h1>
             <button style={{fontSize: "16px"}} onClick={showFavorites}>Favorites</button>
-            <p id="test"></p>
+            <ul id="favorites-display"></ul>
 
             <div id="filters-div">
                 <label>
