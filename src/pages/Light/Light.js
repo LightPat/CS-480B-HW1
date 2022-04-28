@@ -5,6 +5,9 @@ import sevenSpiresLogo from '../../images/Seven-Spires-Logo.jpg'
 import { useState } from 'react';
 import Hollowness from '../../song files/Hollowness.mp3'
 import TTFAF from '../../song files/Through the Fire and Flames.mp3'
+import Heroes from '../../song files/Heroes of our Time.mp3'
+import CryThunder from '../../song files/Cry Thunder.mp3'
+import Freheit from '../../song files/Freheit.mp3'
 
 let dateFilter = ""
 let titleFilter = ""
@@ -30,9 +33,9 @@ function Light() {
 
     const songOptions = [
         {title: "Through the Fire and Flames", artist: "Dragonforce", image: dfLogo, year: 2005, song: TTFAF},
-        {title: "Heroes of Our Time", artist: "Dragonforce", image: dfLogo, year: 2008, song: Hollowness},
-        {title: "Cry Thunder", artist: "Dragonforce", image: dfLogo, year: 2012, song: Hollowness},
-        {title: "Freheit", artist: "Minami", image: minami, year: 2021, song: Hollowness},
+        {title: "Heroes of Our Time", artist: "Dragonforce", image: dfLogo, year: 2008, song: Heroes},
+        {title: "Cry Thunder", artist: "Dragonforce", image: dfLogo, year: 2012, song: CryThunder},
+        {title: "Freheit", artist: "Minami", image: minami, year: 2021, song: Freheit},
         {title: "Crying for Rain", artist: "Minami", image: minami, year: 2019, song: Hollowness},
         {title: "Hollowness", artist: "Minami", image: minami, year: 2019, song: Hollowness},
         {title: "Ghost of Yesterday", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021, song: Hollowness},
@@ -66,11 +69,15 @@ function Light() {
         // Play new audio
         let audio = new Audio(songAudio)
         audio.play()
+        audio.onended=function() {
+            setNowPlayingSong("No Song Playing")
+        }
         playingAudio = audio
     }
 
     function pauseSong() {
         if (playingAudio !== undefined) {
+            setNowPlayingSong("No Song Playing")
             playingAudio.pause()
         }
     }

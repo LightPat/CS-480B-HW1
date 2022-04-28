@@ -1,12 +1,9 @@
 import './Song.css'
+import { Link } from 'react-router-dom'
 
 export default function Song(props) {
     function handlePlayButton() {
         props.playSongHandler(props.title, props.artist, props.song)
-    }
-
-    function downloadButtonClick() {
-        alert("Downloading song")
     }
 
     function handleFavButton() {
@@ -19,7 +16,7 @@ export default function Song(props) {
             <p id='artist'>{props.artist}, {props.year}</p>
             <img id='artist-image' src={props.image} alt=""></img>
             <button id='play-button' onClick={handlePlayButton}>Play</button>
-            <button id='download-button' onClick={downloadButtonClick}>Download</button>
+            <Link to={props.title + ".mp3"} download={props.title + ".mp3"} target="_blank"><button id='download-button'>Download</button></Link>
             <button id='add-to-favorites-button' onClick={handleFavButton}>Add To Favorites</button>
         </div>
     )
