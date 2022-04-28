@@ -10,9 +10,6 @@ let titleFilter = ""
 let artistFilter = ""
 
 function Light() {
-    const [favorites, setFavorites] = useState([]);
-    const [nowPlayingSong, setNowPlayingSong] = useState("No Song Playing");
-
     function filterDate(e) {
         dateFilter = e.target.value
         setFilteredSongs(displaySongs())
@@ -42,31 +39,39 @@ function Light() {
 
     function displaySongs() {
         let componentList = []
-        console.log([dateFilter, titleFilter, artistFilter])
 
         for (let i = 0; i < songOptions.length; i++) {
             if (
                 (dateFilter === "" || songOptions[i]["year"] === parseInt(dateFilter))
                 && songOptions[i]["title"].toLowerCase().includes(titleFilter.toLowerCase())
                 && songOptions[i]["artist"].toLowerCase().includes(artistFilter.toLowerCase())) {
-                componentList.push(<Song title={songOptions[i]["title"]} artist={songOptions[i]["artist"]} image={songOptions[i]["image"]} year={songOptions[i]["year"]} />)
+                componentList.push(<Song title={songOptions[i]["title"]} artist={songOptions[i]["artist"]} image={songOptions[i]["image"]} year={songOptions[i]["year"]} handler={addToFavorites}/>)
             }
         }
 
         return componentList
     }
 
-    const s = () => {
-        setFavorites(favorites + 1)
+    function addToFavorites(newValue) {
+        let placeholder = favorites
+        placeholder.push(newValue)
+        setFavorites(placeholder)
     }
 
+    function debug() {
+        console.log(favorites)
+    }
+
+    const [favorites, setFavorites] = useState(["Empty"]);
+    const [nowPlayingSong, setNowPlayingSong] = useState("No Song Playing");
     const [filteredSongs, setFilteredSongs] = useState(displaySongs());
 
     return (
         <div className="centered">
             <h1 style={{display: "inline", paddingRight: "10px"}}>Cob's Soul Music</h1>
-            <FavoritesModal favorites={favorites}/>
-            <button onClick={s}>Test Button</button>
+            {/* <FavoritesModal id='favorites-modal' favorites={favorites}/> */}
+            <p>{favorites}</p>
+            <button onClick={debug}>Working</button>
 
             <div id="filters-div">
                 <label>
