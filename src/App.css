@@ -45,3 +45,8 @@
 #favorites-display {
   list-style-position: inside;
 }
+
+iframe {
+  height: 10%;
+  width: auto;
+}

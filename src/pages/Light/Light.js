@@ -3,6 +3,8 @@ import dfLogo from '../../images/Dragonforce Logo.webp'
 import minami from '../../images/Minami.png'
 import sevenSpiresLogo from '../../images/Seven-Spires-Logo.jpg'
 import { useState } from 'react';
+import Hollowness from '../../song files/Hollowness.mp3'
+import TTFAF from '../../song files/Through the Fire and Flames.mp3'
 
 let dateFilter = ""
 let titleFilter = ""
@@ -26,15 +28,15 @@ function Light() {
     }
 
     const songOptions = [
-        {title: "Through the Fire and Flames", artist: "Dragonforce", image: dfLogo, year: 2005},
-        {title: "Heroes of Our Time", artist: "Dragonforce", image: dfLogo, year: 2008},
-        {title: "Cry Thunder", artist: "Dragonforce", image: dfLogo, year: 2012},
-        {title: "Freheit", artist: "Minami", image: minami, year: 2021},
-        {title: "Crying for Rain", artist: "Minami", image: minami, year: 2019},
-        {title: "Hollowness", artist: "Minami", image: minami, year: 2019},
-        {title: "Ghost of Yesterday", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021},
-        {title: "Gods of Debauchery", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021},
-        {title: "Lightbringer", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021}
+        {title: "Through the Fire and Flames", artist: "Dragonforce", image: dfLogo, year: 2005, song: TTFAF},
+        {title: "Heroes of Our Time", artist: "Dragonforce", image: dfLogo, year: 2008, song: Hollowness},
+        {title: "Cry Thunder", artist: "Dragonforce", image: dfLogo, year: 2012, song: Hollowness},
+        {title: "Freheit", artist: "Minami", image: minami, year: 2021, song: Hollowness},
+        {title: "Crying for Rain", artist: "Minami", image: minami, year: 2019, song: Hollowness},
+        {title: "Hollowness", artist: "Minami", image: minami, year: 2019, song: Hollowness},
+        {title: "Ghost of Yesterday", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021, song: Hollowness},
+        {title: "Gods of Debauchery", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021, song: Hollowness},
+        {title: "Lightbringer", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021, song: Hollowness}
     ]
 
     function displaySongs() {
@@ -45,7 +47,7 @@ function Light() {
                 (dateFilter === "" || songOptions[i]["year"] === parseInt(dateFilter))
                 && songOptions[i]["title"].toLowerCase().includes(titleFilter.toLowerCase())
                 && songOptions[i]["artist"].toLowerCase().includes(artistFilter.toLowerCase())) {
-                componentList.push(<Song title={songOptions[i]["title"]} artist={songOptions[i]["artist"]} image={songOptions[i]["image"]} year={songOptions[i]["year"]} addFavHandler={addToFavorites} playSongHandler={playSong}/>)
+                componentList.push(<Song title={songOptions[i]["title"]} artist={songOptions[i]["artist"]} image={songOptions[i]["image"]} year={songOptions[i]["year"]} song={songOptions[i]["song"]} addFavHandler={addToFavorites} playSongHandler={playSong}/>)
             }
         }
 
@@ -109,13 +111,11 @@ function Light() {
                 </label>
             </div>
 
-
             <div id="songs-listing">
                 {filteredSongs}
             </div>
 
             <div id='placeholder'></div>
-
             <footer id="now-playing-bar">{nowPlayingSong}</footer>
         </div>
     )
