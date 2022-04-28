@@ -1,0 +1,36 @@
+#song-parent {
+    display: inline-block;
+    outline: 3px black solid;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    padding-bottom: 7px;
+}
+
+#artist-image {
+    max-width: 95%;
+    height: auto;
+}
+
+#title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#artist {
+    font-size: 20px;
+}
+
+#play-button {
+    font-size: 24px;
+}
+
+#download-button {
+    font-size: 24px;
+    margin-left: 2px;
+}
+
+#add-to-favorites-button {
+    font-size: 24px;
+    margin-left: 2px;
+}

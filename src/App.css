@@ -11,108 +11,44 @@
   color: #61dafb;
 }
 
-.dark-login {
-  background-image: url("./images/Super-Star.png");
-  width: 880px;
-  height: 880px;
-  margin: auto;
-  text-align: center;
-}
-
-.dark-game-header {
-  text-align: center;
-}
-
-.dark-game-header button {
-  margin: 0px 20px;
-}
-
-.dark-game {
-  border: 3px solid black;
-  text-align: center;
-  margin: auto;
-  width: 25%;
-  height: 25%;
-  margin-top: 15px;
-  display: inline-block;
-}
-
-.dark-footer {
-  font-size: 8px;
-  position: absolute;
-  bottom: 5px;
-}
-
-.light-footer {
-  font-size: 16px;
-  position: relative;
-}
-
 .centered {
   text-align: center;
 }
 
-.dark-game button {
-  padding: 15px;
-  background-color: green;
-  font-size: 28px;
-  margin: 50px 0px;
+#songs-listing {
+  padding-top: 20px;
 }
 
-.dark-cob-bucks {
-  display: inline-block;
+#now-playing-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  font-size: 40px;
+  background-color: black;
+  padding: 10px 0px;
 }
 
-#gold {
-  font-size: 18px;
-  background-color: gold;
-  text-align: center;
-  width: 12px;
-  height: 25px;
-  margin: auto;
+#placeholder {
+  height: 150px;
+  width: auto;
 }
 
-#silver {
-  font-size: 18px;
-  background-color: silver;
-  text-align: center;
-  width: 12px;
-  height: 25px;
-  margin: auto;
+#filters-div {
+  padding-top: 20px;
 }
 
-#bronze {
-  font-size: 18px;
-  background-color: #cd7f32;
-  text-align: center;
-  width: 12px;
-  height: 25px;
-  margin: auto;
-}
-
-.dark-item {
-  outline: 3px solid black;
-  margin: auto;
-  width: 100px;
-  padding-bottom: 5px;
-}
-
-.dark-item button {
-  background-color: green;
-  font-size: 16px;
-}
-
-.dark-login-incantation {
-  width: 25%;
-  margin: auto;
-  font-size: 48px;
+#filters-div label {
   font-weight: bold;
-  font-style: italic;
-  border: 3px solid black;
-  background-color: red;
+  padding-right: 1%;
 }
 
-.submit-button {
-  background-color: green;
-  font-size: 24px;
+#favorites-display {
+  list-style-position: inside;
+}
+
+#pause-now-playing {
+  font-size: 20px;
+  width: 90px;
+  height: 60px;
+  float: right;
 }
