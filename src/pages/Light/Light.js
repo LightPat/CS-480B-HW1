@@ -1,4 +1,3 @@
-import FavoritesModal from "../../components/FavoritesModal"
 import Song from "../../components/Song"
 import dfLogo from '../../images/Dragonforce Logo.webp'
 import minami from '../../images/Minami.png'
@@ -8,6 +7,7 @@ import { useState } from 'react';
 let dateFilter = ""
 let titleFilter = ""
 let artistFilter = ""
+let favorites = []
 
 function Light() {
     function filterDate(e) {
@@ -53,25 +53,24 @@ function Light() {
     }
 
     function addToFavorites(newValue) {
-        let placeholder = favorites
-        placeholder.push(newValue)
-        setFavorites(placeholder)
+        if (!favorites.includes(newValue)) {
+            favorites.push(newValue)
+            document.getElementById('test').innerHTML = favorites
+        }
+    }
+    
+    function showFavorites() {
+
     }
 
-    function debug() {
-        console.log(favorites)
-    }
-
-    const [favorites, setFavorites] = useState(["Empty"]);
     const [nowPlayingSong, setNowPlayingSong] = useState("No Song Playing");
     const [filteredSongs, setFilteredSongs] = useState(displaySongs());
 
     return (
         <div className="centered">
             <h1 style={{display: "inline", paddingRight: "10px"}}>Cob's Soul Music</h1>
-            {/* <FavoritesModal id='favorites-modal' favorites={favorites}/> */}
-            <p>{favorites}</p>
-            <button onClick={debug}>Working</button>
+            <button style={{fontSize: "16px"}} onClick={showFavorites}>Favorites</button>
+            <p id="test"></p>
 
             <div id="filters-div">
                 <label>
