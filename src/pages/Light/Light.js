@@ -64,7 +64,15 @@ function Light() {
     }
     
     function showFavorites() {
+        let favoritesDisplayList = document.getElementById('favorites-display')
 
+        if (favoritesDisplayList.style.display === "none") {
+            favoritesDisplayList.style.display = "block";
+        }
+        else
+        {
+            favoritesDisplayList.style.display = "none";
+        }
     }
 
     const [nowPlayingSong, setNowPlayingSong] = useState("No Song Playing");
@@ -73,7 +81,7 @@ function Light() {
     return (
         <div className="centered">
             <h1 style={{display: "inline", paddingRight: "10px"}}>Cob's Soul Music</h1>
-            <button style={{fontSize: "16px"}} onClick={showFavorites}>Favorites</button>
+            <button style={{fontSize: "16px"}} onClick={showFavorites}>Toggle Favorites Display</button>
             <ul id="favorites-display"></ul>
 
             <div id="filters-div">

@@ -41,3 +41,7 @@
   font-weight: bold;
   padding-right: 1%;
 }
+
+#favorites-display {
+  list-style-position: inside;
+}
