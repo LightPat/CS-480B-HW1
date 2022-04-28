@@ -68,7 +68,7 @@ function Light() {
     }
     
     function showFavorites() {
-        let favoritesDisplayList = document.getElementById('favorites-display')
+        let favoritesDisplayList = document.getElementById('favorites-div')
 
         if (favoritesDisplayList.style.display === "none") {
             favoritesDisplayList.style.display = "block";
@@ -86,7 +86,11 @@ function Light() {
         <div className="centered">
             <h1 style={{display: "inline", paddingRight: "10px"}}>Cob's Soul Music</h1>
             <button style={{fontSize: "16px"}} onClick={showFavorites}>Toggle Favorites Display</button>
-            <ul id="favorites-display"></ul>
+
+            <div id="favorites-div">
+                <h2>Favorite Songs</h2>
+                <ul id="favorites-display"></ul>
+            </div>
 
             <div id="filters-div">
                 <label>
