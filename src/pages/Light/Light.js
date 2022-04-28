@@ -8,6 +8,10 @@ import TTFAF from '../../song files/Through the Fire and Flames.mp3'
 import Heroes from '../../song files/Heroes of our Time.mp3'
 import CryThunder from '../../song files/Cry Thunder.mp3'
 import Freheit from '../../song files/Freheit.mp3'
+import CryingForRain from '../../song files/Crying For Rain.mp3'
+import Ghost from '../../song files/Ghost Of Yesterday.mp3'
+import Gods from '../../song files/Gods of Debauchery.mp3'
+import Lightbringer from '../../song files/Lightbringer.mp3'
 
 let dateFilter = ""
 let titleFilter = ""
@@ -36,11 +40,11 @@ function Light() {
         {title: "Heroes of Our Time", artist: "Dragonforce", image: dfLogo, year: 2008, song: Heroes},
         {title: "Cry Thunder", artist: "Dragonforce", image: dfLogo, year: 2012, song: CryThunder},
         {title: "Freheit", artist: "Minami", image: minami, year: 2021, song: Freheit},
-        {title: "Crying for Rain", artist: "Minami", image: minami, year: 2019, song: Hollowness},
+        {title: "Crying for Rain", artist: "Minami", image: minami, year: 2019, song: CryingForRain},
         {title: "Hollowness", artist: "Minami", image: minami, year: 2019, song: Hollowness},
-        {title: "Ghost of Yesterday", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021, song: Hollowness},
-        {title: "Gods of Debauchery", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021, song: Hollowness},
-        {title: "Lightbringer", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021, song: Hollowness}
+        {title: "Ghost of Yesterday", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021, song: Ghost},
+        {title: "Gods of Debauchery", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021, song: Gods},
+        {title: "Lightbringer", artist: "Seven Spires", image: sevenSpiresLogo, year: 2021, song: Lightbringer}
     ]
 
     function displaySongs() {

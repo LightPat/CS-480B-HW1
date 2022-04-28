@@ -3,17 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import ErrorPage from './pages/ErrorPage'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 
-// Dark imports
-// import DarkLogin from './pages/Dark/DarkLogin'
-// import DarkGame from './pages/Dark/DarkGame'
-// import DarkLoginBonus from './pages/Dark/DarkLoginBonus'
-// import DarkStore from './pages/Dark/DarkStore'
-
-// Light imports
-// import LightLogin from './pages/Light/LightLogin'
-// import LightGame from './pages/Light/LightGame'
-// import LightLoginBonus from './pages/Light/LightLoginBonus'
-// import LightStore from './pages/Light/LightStore'
+import Dark from './pages/Dark/Dark'
 import Light from './pages/Light/Light'
 
 function App() {
@@ -31,7 +21,7 @@ function App() {
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
 
           <Route path="/light" element={<Light />} />
-          {/* <Route path="/dark" element={<Dark />} /> */}
+          <Route path="/dark" element={<Dark />} />
         </Routes>
       </Router>
       <div className='app'>
