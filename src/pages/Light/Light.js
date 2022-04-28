@@ -45,11 +45,15 @@ function Light() {
                 (dateFilter === "" || songOptions[i]["year"] === parseInt(dateFilter))
                 && songOptions[i]["title"].toLowerCase().includes(titleFilter.toLowerCase())
                 && songOptions[i]["artist"].toLowerCase().includes(artistFilter.toLowerCase())) {
-                componentList.push(<Song title={songOptions[i]["title"]} artist={songOptions[i]["artist"]} image={songOptions[i]["image"]} year={songOptions[i]["year"]} handler={addToFavorites}/>)
+                componentList.push(<Song title={songOptions[i]["title"]} artist={songOptions[i]["artist"]} image={songOptions[i]["image"]} year={songOptions[i]["year"]} addFavHandler={addToFavorites} playSongHandler={playSong}/>)
             }
         }
 
         return componentList
+    }
+
+    function playSong(newSong) {
+        setNowPlayingSong(newSong)
     }
 
     function addToFavorites(newValue) {

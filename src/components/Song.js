@@ -1,20 +1,16 @@
 import './Song.css'
 
 export default function Song(props) {
-    function playOnClick() {
-        alert("Playing song")
+    function handlePlayButton() {
+        props.playSongHandler(props.title)
     }
 
     function downloadButtonClick() {
         alert("Downloading song")
     }
 
-    function addToFavorites() {
-        alert("Adding to favorites")
-    }
-
-    function handleChange() {
-        props.handler(props.title)
+    function handleFavButton() {
+        props.addFavhandler(props.title)
     }
 
     return (
@@ -22,9 +18,9 @@ export default function Song(props) {
             <p id='title'>{props.title}</p>
             <p id='artist'>{props.artist}, {props.year}</p>
             <img id='artist-image' src={props.image} alt=""></img>
-            <button id='play-button' onClick={playOnClick}>Play</button>
+            <button id='play-button' onClick={handlePlayButton}>Play</button>
             <button id='download-button' onClick={downloadButtonClick}>Download</button>
-            <button id='add-to-favorites-button' onClick={handleChange}>Add To Favorites</button>
+            <button id='add-to-favorites-button' onClick={handleFavButton}>Add To Favorites</button>
         </div>
     )
 }
