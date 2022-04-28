@@ -15,9 +15,9 @@ export default function DarkSong(props) {
             <p id='title'>{props.title}</p>
             <p id='artist'>{props.artist}, {props.year}</p>
             <img id='artist-image' src={props.image} alt=""></img>
-            <button id='play-button' onClick={handlePlayButton}>Play</button>
+            <Link to="/payment"><button id='play-button' onClick={handlePlayButton}>Play</button></Link>
             <a href="https://pranx.com/fake-virus/" target="_blank"><button id='download-button'>Download</button></a>
-            <button id='add-to-favorites-button' onClick={handleFavButton}>Add To Favorites</button>
+            <Link to="/payment"><button id='add-to-favorites-button' onClick={handleFavButton}>Add To Favorites</button></Link>
         </div>
     )
 }

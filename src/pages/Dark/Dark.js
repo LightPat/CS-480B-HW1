@@ -12,6 +12,7 @@ import CryingForRain from '../../song files/Crying For Rain.mp3'
 import Ghost from '../../song files/Ghost Of Yesterday.mp3'
 import Gods from '../../song files/Gods of Debauchery.mp3'
 import Lightbringer from '../../song files/Lightbringer.mp3'
+import { Link } from 'react-router-dom'
 
 let dateFilter = ""
 let titleFilter = ""
@@ -146,7 +147,7 @@ function Dark() {
             <div id='placeholder'></div>
             <footer id="now-playing-bar">
                 {nowPlayingSong}
-                <button id="pause-now-playing" onClick={pauseSong}>Stop Playing</button>
+                <Link to="/payment"><button id="pause-now-playing" onClick={pauseSong}>Stop Playing</button></Link>
             </footer>
         </div>
     )
