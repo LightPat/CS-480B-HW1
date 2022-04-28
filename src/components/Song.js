@@ -10,7 +10,7 @@ export default function Song(props) {
     }
 
     function handleFavButton() {
-        props.addFavhandler(props.title)
+        props.addFavHandler(props.title)
     }
 
     return (

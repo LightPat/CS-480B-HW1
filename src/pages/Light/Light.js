@@ -111,6 +111,7 @@ function Light() {
             </div>
 
             <div id='placeholder'></div>
+
             <footer id="now-playing-bar">{nowPlayingSong}</footer>
         </div>
     )
