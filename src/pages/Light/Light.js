@@ -10,6 +10,7 @@ let dateFilter = ""
 let titleFilter = ""
 let artistFilter = ""
 let favorites = []
+let playingAudio = undefined
 
 function Light() {
     function filterDate(e) {
@@ -47,15 +48,25 @@ function Light() {
                 (dateFilter === "" || songOptions[i]["year"] === parseInt(dateFilter))
                 && songOptions[i]["title"].toLowerCase().includes(titleFilter.toLowerCase())
                 && songOptions[i]["artist"].toLowerCase().includes(artistFilter.toLowerCase())) {
-                componentList.push(<Song title={songOptions[i]["title"]} artist={songOptions[i]["artist"]} image={songOptions[i]["image"]} year={songOptions[i]["year"]} song={songOptions[i]["song"]} addFavHandler={addToFavorites} playSongHandler={playSong}/>)
+                componentList.push(<Song title={songOptions[i]["title"]} artist={songOptions[i]["artist"]} image={songOptions[i]["image"]} year={songOptions[i]["year"]} song={songOptions[i]["song"]} addFavHandler={addToFavorites} playSongHandler={playSong} />)
             }
         }
 
         return componentList
     }
 
-    function playSong(newSong) {
-        setNowPlayingSong(newSong)
+    function playSong(songTitle, artist, songAudio) {
+        setNowPlayingSong("Now Playing: " + songTitle + " | Artist: " + artist)
+
+        // First check if anything is playing, stop that audio
+        if (playingAudio !== undefined) {
+            playingAudio.pause()
+        }
+
+        // Play new audio
+        let audio = new Audio(songAudio)
+        audio.play()
+        playingAudio = audio
     }
 
     function addToFavorites(newValue) {

@@ -2,9 +2,8 @@ import './Song.css'
 
 export default function Song(props) {
     function handlePlayButton() {
-        props.playSongHandler("Now Playing: " + props.title + " | Artist: " + props.artist)
-        let audio = new Audio(props.song)
-        audio.play()
+        console.log(props.currentSong)
+        props.playSongHandler(props.title, props.artist, props.song)
     }
 
     function downloadButtonClick() {
