@@ -46,7 +46,9 @@
   list-style-position: inside;
 }
 
-iframe {
-  height: 10%;
-  width: auto;
+#pause-now-playing {
+  font-size: 20px;
+  width: 90px;
+  height: 60px;
+  float: right;
 }

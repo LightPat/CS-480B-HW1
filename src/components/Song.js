@@ -2,7 +2,6 @@ import './Song.css'
 
 export default function Song(props) {
     function handlePlayButton() {
-        console.log(props.currentSong)
         props.playSongHandler(props.title, props.artist, props.song)
     }
 

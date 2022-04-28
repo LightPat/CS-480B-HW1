@@ -69,6 +69,12 @@ function Light() {
         playingAudio = audio
     }
 
+    function pauseSong() {
+        if (playingAudio !== undefined) {
+            playingAudio.pause()
+        }
+    }
+
     function addToFavorites(newValue) {
         if (!favorites.includes(newValue)) {
             favorites.push(newValue)
@@ -127,7 +133,10 @@ function Light() {
             </div>
 
             <div id='placeholder'></div>
-            <footer id="now-playing-bar">{nowPlayingSong}</footer>
+            <footer id="now-playing-bar">
+                {nowPlayingSong}
+                <button id="pause-now-playing" onClick={pauseSong}>Stop Playing</button>
+            </footer>
         </div>
     )
 }
